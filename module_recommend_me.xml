@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_recommend_me" default="compile.module.recommend_me">
+  <dirname property="module.recommend_me.basedir" file="${ant.file.module_recommend_me}"/>
+  
+  <property name="module.jdk.home.recommend_me" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.recommend_me" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.recommend_me" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.recommend_me" value="-encoding UTF-8 -source 13 -target 13 ${compiler.args}"/>
+  
+  <property name="recommend_me.output.dir" value="${module.recommend_me.basedir}/out/production/Recommend Me"/>
+  <property name="recommend_me.testoutput.dir" value="${module.recommend_me.basedir}/out/test/Recommend Me"/>
+  
+  <path id="recommend_me.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="recommend_me.module.production.classpath">
+    <path refid="${module.jdk.classpath.recommend_me}"/>
+  </path>
+  
+  <path id="recommend_me.runtime.production.module.classpath">
+    <pathelement location="${recommend_me.output.dir}"/>
+  </path>
+  
+  <path id="recommend_me.module.classpath">
+    <path refid="${module.jdk.classpath.recommend_me}"/>
+    <pathelement location="${recommend_me.output.dir}"/>
+  </path>
+  
+  <path id="recommend_me.runtime.module.classpath">
+    <pathelement location="${recommend_me.testoutput.dir}"/>
+    <pathelement location="${recommend_me.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.recommend_me">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.recommend_me">
+    <patternset refid="excluded.from.module.recommend_me"/>
+  </patternset>
+  
+  
+  <target name="compile.module.recommend_me" depends="compile.module.recommend_me.production,compile.module.recommend_me.tests" description="Compile module Recommend Me"/>
+  
+  <target name="compile.module.recommend_me.production" depends="register.custom.compilers" description="Compile module Recommend Me; production classes"/>
+  
+  <target name="compile.module.recommend_me.tests" depends="register.custom.compilers,compile.module.recommend_me.production" description="compile module Recommend Me; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.recommend_me" description="cleanup module">
+    <delete dir="${recommend_me.output.dir}"/>
+    <delete dir="${recommend_me.testoutput.dir}"/>
+  </target>
+</project>

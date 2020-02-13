@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="rounded">
+  <h3>5 Most Similar Movies</h3>
+</div>
+
+  <form action="{{url_for('recommend')}}">
+    <input type="text" name="movie" class="form-control" style="width:30%;margin-top: 20px;">
+    <br>
+    <input type="submit" class="btn btn-secondary" value="Recommend" name="submit">
+  </form>
+{% endblock %}
