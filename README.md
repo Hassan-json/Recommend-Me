@@ -83,7 +83,6 @@ Throughout coding, naming scheme of camel case is used for both variables and fu
 Wherever necessary, side-effects have been tried to minimized by isolating its effect at local scope by making use of python&#39;s context management.
 
 ```
-
 from src.POM_Unit_Tests.Locators import Locators
 class HomePage:
     def __init__(self, driver):
@@ -148,20 +147,11 @@ IntelliJ Cheat Sheet
 
 # Build Management (+ DSL)
 
-For the purposes of build management this project is dependent on Travis CI since builds are being managed at the time of project deployment. Consider following example;
+For the purposes of build management this project is dependent on Gradle and IML file 
 
-![Build Script](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/travis-build.PNG)
-
-During build deployment, Travis has been instructed to;
-
-1. Check for compatibility of source code with python version 2.7, 3.4 and 3.5
-2. Install pre-requisite packages of project found in file requirments.txt
-3. Delete contents of directory &quot;images&quot; where images that are to be processed will be stored
-4. Deploy fresh build on Heroku instance for application &quot;tag-me&quot; (unique identifier on Heroku.com)
-
-Following is the output of following script;
-
-![Build Output Log](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/build%20script%20respose.PNG)
+![GIT](https://github.com/Hassan-json/Recommend-Me/blob/master/images/Gradle.PNG)
+![GIT](https://github.com/Hassan-json/Recommend-Me/blob/master/images/iml.PNG)
+![GIT](https://github.com/Hassan-json/Recommend-Me/blob/master/images/files.PNG)
 
 **P.S: Following script is also an example of Domain Specific Language. This script has been written in YAML (****.yml).**
 
@@ -172,20 +162,27 @@ Throughout this project, good practices for functional programming have been ado
 ### 1. Final Data Structures Usage
 Few variables have been made made immutable in code. Hence using as constant.
 
-![Final](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/conigurable%20at%20higher%20level.PNG)
+```
+cv = CountVectorizer()
+count_matrix = cv.fit_transform(data['comb'])
+sim = cosine_similarity(count_matrix)
+np.save('similarity_matrix', sim)
+data.to_csv('D:/CS4DS & SWT++/Recommend-Me/data_files/data.csv',index=False)
+```
 
 ### 2. Side Effect Free Functions
 As discussed earlier, wherever necessary context management has been used. So that effect of overlying function could remain locally. Hence using them would not result any side effects.
 
-![Side Effect Free](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/context-maagement.PNG)
+![Side Effect Free](https://github.com/Hassan-json/Recommend-Me/blob/master/images/Capture_new.PNG)
+
 
 ### 3. Use of higher order functions
 Higher order functions like map and filter have also been used.
 
-![Higher Order Function](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/map.PNG)
+![Higher Order Function](https://github.com/Hassan-json/Recommend-Me/blob/master/images/hof.PNG)
 
 ### 4. Clojures/Anonymous Functions
 
 Usage of anonymous functions like &quot;Lambda&quot; have also been made, for getting rid from unnecessary function signature bodies where required.
 
-![Anonymous Function](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/lambda.PNG)
+![Anonymous Function](https://github.com/Hassan-json/Recommend-Me/blob/master/images/lamda.PNG)
