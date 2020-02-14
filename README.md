@@ -134,6 +134,7 @@ Continuous Delivery and integration pipeline of this project is based on Jenkins
 ### Selenium 
 
 ![POM](https://github.com/Hassan-json/Recommend-Me/blob/master/images/selenium.png)
+![POM](https://github.com/Hassan-json/Recommend-Me/blob/master/images/pom.png)
 
 ### Git BASH 
 
@@ -141,6 +142,7 @@ Continuous Delivery and integration pipeline of this project is based on Jenkins
 
 # IDE for Developemnet 
 IntelliJ Cheat Sheet
+
 ![GIT](https://github.com/Hassan-json/Recommend-Me/blob/master/images/IntelliJ-cheat-sheet-part-1.jpg)
 
 
