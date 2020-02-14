@@ -70,7 +70,7 @@ Software metrics that were monitor during course of development were;
 
 ![Context Management Usage](https://github.com/Hassan-json/Recommend-Me/blob/master/images/screencapture-localhost-9000-dashboard-1581469959797.png)
 ![Context Management Usage](https://github.com/Hassan-json/Recommend-Me/blob/master/images/screencapture-localhost-9000-project-activity-1581470237478.png)
-![Context Management Usage](https://github.com/Hassan-json/Recommend-Me/blob/master/images/screencapture-localhost-9000-project-activity-1581470237478.png)
+![Context Management Usage](https://github.com/Hassan-json/Recommend-Me/blob/master/images/screencapture-localhost-9000-component_measures-1581470180203.png)
 
 
 
