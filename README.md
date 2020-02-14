@@ -1,7 +1,7 @@
 # Introduction
 
-Recommend Me is a movie recommender movie system, recommendation systems based on content (already existed movies data) and matches funcation based on cosine similarity. The service is connected with FLASK REST API and respond through an HTTP request. 
-Here are the details: 
+Recommend Me, is a movie recommender system, recommendation based on content (already existed movies data) and matching function based on cosine similarity. The service is connected with FLASK REST API and respond through an HTTP request. 
+Here are the details:
 
 # Cosine similarity
 The dot product between two vectors is equal to the projection of one of them on the other.
