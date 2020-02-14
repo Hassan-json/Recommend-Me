@@ -150,10 +150,16 @@ IntelliJ Cheat Sheet
 For the purposes of build management this project is dependent on Gradle and IML file 
 
 ![GIT](https://github.com/Hassan-json/Recommend-Me/blob/master/images/Gradle.PNG)
+
+Following script is also an example of Domain Specific Language. This script has been written in .iml.
+
 ![GIT](https://github.com/Hassan-json/Recommend-Me/blob/master/images/iml.PNG)
+
+Directory Structure
+
 ![GIT](https://github.com/Hassan-json/Recommend-Me/blob/master/images/files.PNG)
 
-**P.S: Following script is also an example of Domain Specific Language. This script has been written in .iml.
+
 
 # Functional Programming
 
