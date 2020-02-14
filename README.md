@@ -71,7 +71,7 @@ Software metrics that were monitor during course of development were;
 ![Context Management Usage](https://github.com/Hassan-json/Recommend-Me/blob/master/images/screencapture-localhost-9000-dashboard-1581469959797.png)
 ![Context Management Usage](https://github.com/Hassan-json/Recommend-Me/blob/master/images/screencapture-localhost-9000-project-activity-1581470237478.png)
 ![Context Management Usage](https://github.com/Hassan-json/Recommend-Me/blob/master/images/screencapture-localhost-9000-component_measures-1581470180203.png)
-
+![Context Management Usage](https://github.com/Hassan-json/Recommend-Me/blob/master/images/Sonar.PNG)
 
 
 # Clean Code Development
@@ -82,34 +82,67 @@ Throughout coding, naming scheme of camel case is used for both variables and fu
 ### 2. Minimizing of Side-Effect using Context Management
 Wherever necessary, side-effects have been tried to minimized by isolating its effect at local scope by making use of python&#39;s context management.
 
-![Context Management Usage](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/context-maagement.PNG)
+```
+
+from src.POM_Unit_Tests.Locators import Locators
+class HomePage:
+    def __init__(self, driver):
+        self.driver = driver
+        self.movieNameText_name = Locators.Locators.movieNameText_name
+        self.searchBtn_name = Locators.Locators.searchBtn_name
+```
+
 
 ### 3. Modularity
 Source code has been divided into two modules. Module &quot;Analyzer&quot; is responsible for object recognition tasks, while module &quot;Router&quot; is responsible for routing of incoming and outgoing rest API requests.
 
-![Module Analyzer(analyzer.py) being imported in Module Router(app.py)](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/modularity.PNG)
+![Module Analyzer(analyzer.py) being imported in Module Router(app.py)](https://github.com/Hassan-json/Recommend-Me/blob/master/images/Capture_new.PNG)
 
 ### 4. Exception Handling
 Wherever necessary exception handling blocks have been added to ensure that no runtime errors are thrown.
 
-![Exception Handling](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/error%20hanlding.PNG)
+![Exception Handling](https://github.com/Hassan-json/Recommend-Me/blob/master/images/capture_01.PNG)
 
 Exception Handling Usage
 
 ### 5. Configurable Data at Higher Level
 All configurable data (for example: Directory names, paths), have been placed at higher level, making tweaking of values easier for the purpose of debugging.
 
-![Configurable Data](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/conigurable%20at%20higher%20level.PNG)
+![Configurable Data](https://github.com/Hassan-json/Recommend-Me/blob/master/images/libs.PNG)
 
 Configurable Data and Constants at higher level
 
 # Continuous Delivery
 
-Continuous Delivery and integration pipeline of this project is based on Git, Travis CI and Heroku. Travis CI is listening for modifications on Git repository. Any modifications in code base will trigger Travis CI, which will initiate a set of tests for validating successful integration of newly added code with already tested production-ready code in Git repository. Upon successful integration, Travis CI will deploy source code on our production server at Heroku.
+Continuous Delivery and integration pipeline of this project is based on Jenkins. 
 
-Following diagram depicts code delivery flow;
+![Jenkins](https://github.com/Hassan-json/Recommend-Me/blob/master/images/Jenkins%20-%20Home.PNG)
+![Jenkins](https://github.com/Hassan-json/Recommend-Me/blob/master/images/Jenkins%20-%20Console%20output.PNG)
 
-![Continous Delivery](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/deployment%20flow.PNG)
+# Unit Testing 
+### POM Project Model
+![POM](https://github.com/Hassan-json/Recommend-Me/blob/master/images/Page-Object-Model-Framework.png)
+
+### POM Directory Structure 
+
+![POM](https://github.com/Hassan-json/Recommend-Me/blob/master/images/POM.PNG)
+
+### POM Unit Case Class 
+
+![POM](https://github.com/Hassan-json/Recommend-Me/blob/master/images/POM%20unit%20test.PNG)
+
+### Selenium 
+
+![POM](https://github.com/Hassan-json/Recommend-Me/blob/master/images/selenium.png)
+
+### Git BASH 
+
+![GIT](https://github.com/Hassan-json/Recommend-Me/blob/master/images/Capture.PNG)
+
+# IDE for Developemnet 
+IntelliJ Cheat Sheet
+![GIT](https://github.com/Hassan-json/Recommend-Me/blob/master/images/IntelliJ-cheat-sheet-part-1.jpg)
+
 
 # Build Management (+ DSL)
 
